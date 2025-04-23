@@ -7,7 +7,6 @@
 - wkhtmltopdf
 - inkscape
 - cpdf
-- exiftool
 
 ## Usage
 Find interested ID in BOOK_IDS, for example `EKKE : 2019 KUGA EUROPE`
