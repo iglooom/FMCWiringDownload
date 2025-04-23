@@ -14,7 +14,7 @@ mkdir -p ./${BOOK}/pdf/
 
 for i in ./${BOOK}/svg/*.svg; do
    echo $i
-#    inkscape --export-type="pdf" -o "./${BOOK}/pdf/$(basename $i .svg).pdf" $i
+   inkscape --export-type="pdf" -o "./${BOOK}/pdf/$(basename $i .svg).pdf" $i
    qalifier=$(grep '<Qualifier>' $i | sed -E 's/(<Qualifier>|<\/Qualifier>|^[[:space:]]*)//g' | tr -d '\n\r')
    if [[ -n "$qalifier" ]]; then
      cpdf -set-title "$(basename $i .svg) $qalifier" "./${BOOK}/pdf/$(basename $i .svg).pdf" -also-set-xmp -o "./${BOOK}/pdf/$(basename $i .svg).pdf"
