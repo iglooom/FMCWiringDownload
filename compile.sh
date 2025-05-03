@@ -38,7 +38,7 @@ cpdf -set-title "150 Connector Views" -also-set-xmp "./${BOOK}/cells/150.pdf" -o
 
 cpdf -merge -merge-add-bookmarks -merge-add-bookmarks-use-titles -remove-duplicate-fonts ./${BOOK}/cells/*.pdf AND -remove-annotations -o ./${BOOK}/out.pdf
 
-FILENAME=$(echo -n "${MODELNAME} ${MODELYEAR}" | sed 's/ /_/g')
+FILENAME=$(echo -n "${MODELNAME} ${MODELYEAR}" | sed 's/ /_/g' | sed 's/\//_/g')
 cpdf -set-title "${MODELNAME} ${MODELYEAR}" ./${BOOK}/out.pdf AND \
    -add-text "${MODELNAME} ${MODELYEAR}" -bottomright 10 -underneath AND \
    -add-text "%Bookmark0 %Bookmark1" -bottomleft 10 -underneath AND \
