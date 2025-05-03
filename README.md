@@ -18,3 +18,6 @@ Run
 ```
 
 You can alter `index` file for correct bookmarks. The index slightly differs between cars.
+
+## Download
+Some compiled books can download here https://www.drive2.ru/l/702966438100491011/
